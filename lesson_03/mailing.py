@@ -7,6 +7,5 @@ class Mailing:
         self.cost = cost
         self.track = track
     def __str__(self):
-        to_address_str = "".join(str(Address))
-        from_address_str = "".join(str(Address))
-        return f"Отправление {self.track} из {to_address_str} в {from_address_str} . Стоимостью {self.cost} рублей."
+
+        return f"Отправление {self.track} из {self.to_address} в {self.from_address} . Стоимостью {self.cost} рублей."

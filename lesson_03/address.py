@@ -7,4 +7,4 @@ class Address:
         self.kvartira = kvartira
 
     def __str__(self):
-            return f"{self.index}, {self.gorod}, {self.uliza}, {self.dom} - {self.kvartira}"
+            return (f"{self.index}, {self.gorod}, {self.uliza}, {self.dom} - {self.kvartira}")
