@@ -1,8 +1,6 @@
 from  selenium import webdriver
-from time import sleep
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from selenium.webdriver.common.by import By
 from pages.FormPage import FormPage
 
 def test_form_first_name():
