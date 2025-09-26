@@ -8,10 +8,10 @@ def test_cal():
     calc_page = CalcPage(driver)
     calc_page.open_calc()
     calc_page.delay_calc(45)
-    calc_page.entering_number('7')
-    calc_page.entering_action("'+'")
-    calc_page.entering_number('8')
-    calc_page.entering_ravno()
+    calc_page.click_calculator_button('7')
+    calc_page.click_calculator_button("'+'")
+    calc_page.click_calculator_button('8')
+    calc_page.click_calculator_button("'='")
     otv = calc_page.otvet()
     assert otv == 15
 

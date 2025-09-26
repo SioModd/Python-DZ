@@ -28,9 +28,9 @@ def test_shop():
     cart_shop.checkout()
 
     result_shop = ResultShop(driver)
-    result_shop.first_name("Anton")
-    result_shop.last_name("Petrov")
-    result_shop.zip_code("ghrrdv")
+    result_shop.fill_form("Anton", "first-name")
+    result_shop.fill_form("Petrov", "last-name")
+    result_shop.fill_form("ghrrdv", "postal-code")
     result_shop.contin()
     value = result_shop.total_summ()
     assert value == 58.29

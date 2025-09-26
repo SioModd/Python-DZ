@@ -5,14 +5,8 @@ class ResultShop():
         self._driver = driver
         self._driver.implicitly_wait(4)
     
-    def first_name(self,f_name):
-        self._driver.find_element(By.CSS_SELECTOR, "#first-name").send_keys(f_name)
-
-    def last_name(self, l_name):
-        self._driver.find_element(By.CSS_SELECTOR, "#last-name").send_keys(l_name)
-
-    def zip_code(self, code):
-        self._driver.find_element(By.CSS_SELECTOR, "#postal-code").send_keys(code)
+    def fill_form(self,filling, form_field_locator):
+        self._driver.find_element(By.CSS_SELECTOR, "#" + form_field_locator).send_keys(filling)
 
     def contin(self):
         self._driver.find_element(By.CSS_SELECTOR, "#continue").click()

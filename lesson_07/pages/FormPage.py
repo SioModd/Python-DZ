@@ -6,26 +6,14 @@ class FormPage():
     def __init__(self, driver):
         self._driver = driver
         self.wait = WebDriverWait(driver, 5)
-        self.fields = {
-            'first-name': "Иван",
-            'last-name': "Петров",
-            'address': "Ленина, 55-3",
-            'zip-code': "",
-            'city': "Москва",
-            'country': "Россия",
-            'e-mail': "test@skypro.com",
-            'phone': "+7985899998787",
-            'job-position': "QA",
-            'company': "SkyPro"
-        }
 
     def open(self):
         self._driver.get("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
         self._driver.implicitly_wait(4)
         self._driver.maximize_window()
 
-    def fill_form(self):
-        for field, value in self.fields.items():
+    def fill_form(self, fields):
+        for field, value in fields.items():
             self.wait.until(EC.presence_of_element_located((By.NAME, field))).send_keys(value)
 
     def submit(self):
